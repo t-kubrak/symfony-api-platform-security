@@ -17,5 +17,9 @@ class SecurityController extends AbstractController
                 'error' => 'Invalid login request: check that the Content-Type header is "application/json".'
             ], 400);
         }
+
+        return $this->json([
+            'user' => $this->getUser() ? $this->getUser()->getId() : null]
+        );
     }
 }
