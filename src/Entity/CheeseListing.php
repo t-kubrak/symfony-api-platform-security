@@ -22,7 +22,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *          },
  *          "put"={
  *              "security"="is_granted('ROLE_USER') and object.getOwner() == user",
- *              "security_control_message"="Only the creator can edit a cheese listing"
+ *              "security_message"="Only the creator can edit a cheese listing"
  *          },
  *          "delete"={"access_control"="is_granted('ROLE_ADMIN')"}
  *     },
